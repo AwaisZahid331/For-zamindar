@@ -1,0 +1,308 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* styles.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Poppins:ital,wght@0,200;1,300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400&family=Poppins:ital,wght@0,200;1,300&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;600&family=Poppins:ital,wght@0,200;1,300&display=swap");
+.custom-button {
+  /* Add your styling here */
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+nav {
+  /* height: 70px; */
+  box-shadow: 1px 2px 5px lightgray;
+  font-family: "Catamaran", sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 498px) {
+  .text-light {
+    font-size: 13px; /* Adjust the font size as needed */
+  }
+  .container {
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+}
+/* Media query for screens smaller than 498px */
+@media screen and (max-width: 498px) {
+  .custom-button {
+    font-size: 12px; /* Adjust the font size as needed */
+    padding: 8px 12px; /* Adjust the padding as needed */
+  }
+}
+/* Media query for screens smaller than 352px */
+/* Media query for screens smaller than 500px */
+@media screen and (max-width: 500px) {
+  .d-block {
+    max-width: 700px; /* Adjust the max-width as needed */
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+  }
+}
+
+.container-md {
+  height: 300px;
+  /* color: white; */
+  border-radius: 15px 15px;
+  font-family: "Catamaran", sans-serif;
+  align-items: center;
+  font-size: 1.4rem;
+  /* background: url(/public/images/img1.jpg); */
+  /* background-color: #dad9e0; */
+}
+/* Light mode */
+/* .nav-light {
+  color: black;
+} */
+
+/* Dark mode */
+/* .nav-dark {
+  color: white;
+} */
+
+/* Responsive styles */
+.container-md {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Center the text */
+.content {
+  text-align: center;
+}
+
+/* Adjust text within the paragraph */
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  /* Add other styles as needed */
+}
+
+/* Margin for h1 and p */
+.content h1,
+.content p {
+  margin-top: 20px; /* Adjust the margin-top value as needed */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.card {
+  border: 0;
+  /* margin: 0px 9px; */
+}
+.card {
+  border-radius: 2px solid gray;
+}
+
+/* card group aka PRIMARY */
+.card-group .card-primary:hover {
+  box-shadow: 0 40px 60px -20px rgba(12, 5, 62, 0.15);
+  z-index: 100;
+}
+.card-group .card-primary:hover .card-title {
+  color: #4e22d0;
+}
+.card-group .card-primary .card-img-top {
+  width: 264px;
+  height: 200px;
+  margin: 80px auto 12px;
+}
+/* .card-group .card-primary .card-body > .badge {
+  /* margin-bottom: 24px; */
+/* }  */
+.card-group .card-primary .card-body {
+  padding: 0 32px;
+}
+.card-group .card-primary .card-title {
+  color: #261c6a;
+  font-size: 22px;
+  /* line-height: 1.54; */
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.card-group .card-primary .card-text {
+  color: #261c6a;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+
+/* Styles for the FAQ section */
+section {
+  padding: 60px 0; /* Adjust padding as needed */
+}
+
+.text-primary {
+  color: #007bff; /* Change the primary text color as desired */
+}
+
+/* Center align h3 and p */
+h3, p {
+  text-align: center;
+}
+
+/* Styles for each FAQ item */
+.mb-4 {
+  margin-bottom: 1.5rem; /* Adjust margin bottom */
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Adjust margin bottom */
+}
+
+/* Icon styles */
+.text-primary .far,
+.text-primary .fas {
+  color: #007bff; /* Match the primary text color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mb-4 {
+    margin-bottom: 2rem; /* Adjust margin bottom for smaller screens */
+  }
+}
+.container-fluid{
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.1rem;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+
+.animated-image {
+  width: 200px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  animation-name: animateImage;
+  animation-duration: 2s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Will repeat indefinitely */
+  animation-timing-function: linear; /* Animation timing */
+}
+
+@keyframes animateImage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); /* Modify scale as per your preference */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+.container {
+  width: 100%;
+  max-width: 960px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+  .clearfix {
+    display: block;
+  }
+  .animated-image {
+    float: none;
+    margin: 0 auto; /* Center the image */
+    display: block;
+    max-width: 100%; /* Ensure image doesn't overflow */
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .animated-image {
+    float: right;
+    max-width: 60%; /* Adjust as needed */
+    margin-left: 20px; /* Adjust spacing between image and text */
+    /* display: none; */
+  }
+}
+
+.card {
+  margin: 20px; /* Adjust as needed */
+}
+
+
+.heading{
+  font-family: "Catamaran", sans-serif;
+}
+
+/* For dark mode text color */
+/* For dark mode text color */
+/* For dark mode text color */
