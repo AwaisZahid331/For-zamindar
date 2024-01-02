@@ -18,7 +18,7 @@ const S1 = () => {
         <div className="col-md-6">
           <div className="d-flex justify-content-between">
             <div>
-              <h5 className="text-center mb-4">Calculus</h5>
+              <h5 className="text-center mb-4">Calculus & Analytical Geomatry</h5>
             </div>
             <div>
               <button className="btn btn-primary" onClick={downloadPDF}>
@@ -59,6 +59,16 @@ const S1 = () => {
           <div className="d-flex justify-content-between mt-3">
             <div>
               <h5 className="text-center mb-4">Applied Physics</h5>
+            </div>
+            <div>
+              <button className="btn btn-primary" onClick={downloadPDF}>
+                Download PDF
+              </button>
+            </div>
+          </div><hr />
+          <div className="d-flex justify-content-between mt-3">
+            <div>
+              <h5 className="text-center mb-4">Functional English</h5>
             </div>
             <div>
               <button className="btn btn-primary" onClick={downloadPDF}>

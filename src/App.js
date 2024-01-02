@@ -147,6 +147,11 @@ import Phy5 from './Physics_Semesters/Phy5';
 import Phy6 from './Physics_Semesters/Phy6';
 import Phy7 from './Physics_Semesters/Phy7';
 import Phy8 from './Physics_Semesters/Phy8';
+
+
+
+
+
 import PS1 from './Psyc_Semesters/PS1';
 import PS2 from './Psyc_Semesters/PS2';
 import PS3 from './Psyc_Semesters/PS3';
@@ -155,6 +160,10 @@ import PS5 from './Psyc_Semesters/PS5';
 import PS6 from './Psyc_Semesters/PS6';
 import PS7 from './Psyc_Semesters/PS7';
 import PS8 from './Psyc_Semesters/PS8';
+
+
+
+
 import Us1 from './Urdu_Semesters/Us1';
 import Us2 from './Urdu_Semesters/Us2';
 import Us3 from './Urdu_Semesters/Us3';
@@ -239,8 +248,8 @@ function App() {
           <Route path="/b_s6" element={<B_S6 />} />
           <Route path="/b_s7" element={<B_S7 />} />
           <Route path="/b_s8" element={<B_S8 />} />
-          
-        
+
+
           {/* This is for Chemistry Semesters */}
           <Route path="/che1" element={<Che1 />} />
           <Route path="/che2" element={<Che2 />} />
@@ -263,9 +272,9 @@ function App() {
           <Route path="/es6" element={<Es6 />} />
           <Route path="/es7" element={<Es7 />} />
           <Route path="/es8" element={<Es8 />} />
-      
-      
-      
+
+
+
           <Route path="/e1" element={<E1 />} />
           <Route path="/e2" element={<E2 />} />
           <Route path="/e3" element={<E3 />} />
@@ -300,10 +309,6 @@ function App() {
 
 
 
-
-
-
-
           <Route path="/phy1" element={<Phy1 />} />
           <Route path="/phy2" element={<Phy2 />} />
           <Route path="/phy3" element={<Phy3 />} />
@@ -334,15 +339,6 @@ function App() {
           <Route path="/ps6" element={<Us6 />} />
           <Route path="/ps7" element={<Us7 />} />
           <Route path="/ps8" element={<Us8 />} />
-
-
-
-
-
-
-
-
-
 
           {/* Default route */}
           <Route path="*" element={<Home />} />
