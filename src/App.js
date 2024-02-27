@@ -1,15 +1,22 @@
-// import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './MyComponents/Navbar';
 import About from './MyComponents/About';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PastPapers from './MyComponents/PastPapers';
 import Contact from './MyComponents/Contact';
 import Help from './MyComponents/Help';
 import Home from './MyComponents/Home';
 import Footer from './MyComponents/Footer';
-// import { useState } from 'react';
+// import Signup from './MyComponents/Signup';
+// import Login from './MyComponents/Login';
+
+
+
+
+
+
+
+
 
 
 
@@ -176,9 +183,29 @@ import Us8 from './Urdu_Semesters/Us8';
 
 
 function App() {
+  // const [showSignup, setShowSignup] = useState(false);
+  // const [showLogin, setShowLogin] = useState(false);
+  // const [popup, setPopup] = useState('');
 
+  // const handleSignupClick = () => {
+  //   setShowSignup(true);
+  //   setShowLogin(false);
+  // };
+
+  // const handleLoginClick = () => {
+  //   setShowLogin(true);
+  //   setShowSignup(false);
+  // };
   return (
     <>
+      
+      {/* <div>
+        {popup && <div>{popup}</div>}
+        <button className="btn btn-primary me-2" onClick={handleSignupClick}>Sign Up</button>
+        <button className="btn btn-success" onClick={handleLoginClick}>Login</button>
+        {showSignup && <Signup setPopup={setPopup} />}
+        {showLogin && <Login setPopup={setPopup} />}
+      </div> */}
       <Router>
         <Navbar />
         <Routes>

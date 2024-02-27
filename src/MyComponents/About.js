@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const About = () => {
   return (
-    <>
+    <><br /><br />
       <div>
         {/* Our Mission Section */}
         <div className="container-lg text-center mt-5">

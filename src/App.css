@@ -58,7 +58,7 @@
 
 nav {
   /* height: 70px; */
-  box-shadow: 1px 2px 5px lightgray;
+  box-shadow: 1px 2px 5px rgb(85, 73, 73);
   font-family: "Catamaran", sans-serif;
   font-weight: bold;
 }
@@ -179,8 +179,6 @@ nav {
   font-weight: 400;
 }
 
-
-
 /* Styles for the FAQ section */
 section {
   padding: 60px 0; /* Adjust padding as needed */
@@ -191,7 +189,8 @@ section {
 }
 
 /* Center align h3 and p */
-h3, p {
+h3,
+p {
   text-align: center;
 }
 
@@ -216,7 +215,7 @@ h3, p {
     margin-bottom: 2rem; /* Adjust margin bottom for smaller screens */
   }
 }
-.container-fluid{
+.container-fluid {
   font-family: "Catamaran", sans-serif;
   font-size: 1.1rem;
 }
@@ -228,10 +227,9 @@ h3, p {
   border-radius: 8px;
 }
 
-
 .animated-image {
-  width: 200px; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
+  width: 450px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
   animation-name: animateImage;
   animation-duration: 2s; /* Duration of the animation */
   animation-iteration-count: infinite; /* Will repeat indefinitely */
@@ -249,9 +247,6 @@ h3, p {
     transform: scale(1);
   }
 }
-
-
-
 
 .container {
   width: 100%;

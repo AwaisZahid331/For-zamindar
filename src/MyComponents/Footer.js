@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
 
     return (
-        <>
+        <> 
             <div>
-
                 <footer className="text-lg-start text-white bg-dark " style={{ backgroundColor: "#1c2331" }}>
+       
                     {/* <section className="d-flex justify-content-between p-4" style={{ backgroundColor: "gray" }}> 
                     </section> */}
                     <section className="">

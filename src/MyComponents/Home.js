@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import '../App.css'
 
 const Home = (props) => {
 
@@ -19,9 +20,10 @@ const Home = (props) => {
                     and their Answers. We invite your commitments to cultivate a cooperative climate that backings and helps
                     individual students. Your dynamic support assists upgrade the learning with encountering for everybody.</p>
                   <div>
-                    <NavLink to="/contact"><button className="custom-button">Contact Us</button></NavLink>
-                    <NavLink to="/pastpapers"><button className="custom-button">Past Papers</button></NavLink>
+                    <NavLink to="/contact"><button className="btn btn-primary" style={{ margin: "3px" }}>Contact Us</button></NavLink>
+                    <NavLink to="/pastpapers"><button className="btn btn-success">Past Papers</button></NavLink>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -31,10 +33,9 @@ const Home = (props) => {
         {/* --------------------------------- */}
         <br /><br />
         <div className=" container mt-4"  >
-         <div className="clearfix mt-4 ">
-            <h2>Your Gateway to Premium Academic Resources</h2>
+          <div className="clearfix mt-4 ">
+            <h2>Your Gateway to Premium Academic <br /> Resources</h2>
             <img src="/images/edu.png" class="col-md-6 float-md-end mb-3 ms-md-3 rounded-start  animated-image" alt="..." />
-
             <p>
               Creating a website tailored for university students is a fantastic initiative! Providing notes,
               past papers, and helpful materials on your platform would be incredibly beneficial for students.
@@ -58,8 +59,6 @@ const Home = (props) => {
           </div>
         </div><br /><br />
       </div>
-
-
     </>
   )
 }
