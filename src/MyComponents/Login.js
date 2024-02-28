@@ -1,10 +1,9 @@
-// src/components/Login.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 
 const Login = ({ setPopup }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [showLogin, setShowLogin] = useState(true); // Initially show the login form
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,15 +22,36 @@ const Login = ({ setPopup }) => {
     }
   };
 
+  const handleClose = () => {
+    setShowLogin(false); // Close the login form
+  };
+
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} autoComplete='off' />
-        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} autoComplete='off' />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <>
+      {showLogin && (
+        <div className="login-form-container">
+          <div className="login-form">
+            <form onSubmit={handleSubmit} className="p-3">
+              <h2>Hi user👋</h2>
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <input type="email" className="form-control form-control-sm" name="email" placeholder="Email" value={formData.email} onChange={handleChange} autoComplete='off' required/>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <input type="password" className="form-control form-control-sm" name="password" placeholder="Password" value={formData.password} onChange={handleChange} autoComplete='off' required />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <button type="submit" className="btn btn-primary btn-sm btn-block">Login</button>
+                </div>
+              </div>
+              <button className=" btn btn-danger close-icon " onClick={handleClose}>Close</button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -198,14 +198,8 @@ function App() {
   // };
   return (
     <>
-      
-      {/* <div>
-        {popup && <div>{popup}</div>}
-        <button className="btn btn-primary me-2" onClick={handleSignupClick}>Sign Up</button>
-        <button className="btn btn-success" onClick={handleLoginClick}>Login</button>
-        {showSignup && <Signup setPopup={setPopup} />}
-        {showLogin && <Login setPopup={setPopup} />}
-      </div> */}
+
+     
       <Router>
         <Navbar />
         <Routes>
@@ -214,6 +208,7 @@ function App() {
           <Route path="/pastpapers" element={<PastPapers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
+          {/* <Route path="/signup" element={<Signup />} /> */}
 
 
 

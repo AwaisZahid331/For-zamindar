@@ -286,3 +286,24 @@ p {
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
+/* app.css */
+
+/* Signup form styling */
+.signup-form {
+  position: absolute;
+  top: 50px; /* Adjust this value according to your navbar height */
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-form {
+  position: absolute;
+  top: 50px; /* Adjust this value according to your navbar height */
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
