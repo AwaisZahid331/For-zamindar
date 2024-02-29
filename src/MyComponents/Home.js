@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../App.css'
-
+// import { useEffect } from 'react'
 const Home = (props) => {
 
   return (
