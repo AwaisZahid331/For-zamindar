@@ -1,56 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Button, Form, ListGroup } from 'react-bootstrap';
+// import CommentForm from './CommentForm';
+// import CommentsList from './CommentsList';
 
 const Help = () => {
-  const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState('');
-  const [replyTo, setReplyTo] = useState(null);
-  const [replyText, setReplyText] = useState('');
-
-  const handleInputChange = (e) => {
-    setNewComment(e.target.value);
-  };
-
-  const handleReply = (commentIndex) => {
-    setReplyTo(commentIndex);
-  };
-
-  const handleReplyInputChange = (e) => {
-    setReplyText(e.target.value);
-  };
-
-  const handleReplySubmit = (e) => {
-    e.preventDefault();
-    if (replyText.trim() !== '') {
-      const repliedComment = { text: replyText, replies: [] };
-      const updatedComments = [...comments];
-      updatedComments[replyTo].replies.push(repliedComment);
-      setComments(updatedComments);
-      setReplyText('');
-      setReplyTo(null);
+  useEffect(() => {
+    // Initialize AOS library
+    if (typeof window !== 'undefined') {
+      const AOS = require('aos');
+      AOS.init({
+        // Add AOS configurations here if needed
+      });
     }
-  };
+  }, []);
 
-  const handleMainCommentSubmit = (e) => {
-    e.preventDefault();
-    if (newComment.trim() !== '') {
-      if (replyTo !== null) {
-        // Handle replying to a comment
-        // ... (same logic as handleReplySubmit)
-      } else {
-        // Handle submitting a main comment
-        setComments([...comments, { text: newComment, replies: [] }]);
-        setNewComment('');
-      }
-    }
-  };
   return (
     <>
-
-      {/* <!--Section: FAQ--> */}
-     <br /><br /><br />
+      {/* Section: FAQ */}
+      <br /><br /><br />
       <div className="container-fluid">
-        {/* <!--Section: FAQ--> */}
         <section className='p-4'>
           <h3 className="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
           <p className="text-center mb-5">
@@ -108,74 +76,14 @@ const Help = () => {
         </section>
       </div>
       <br />
+
       <div className="container">
-
-      <hr />
+        <hr />
+       
+        <br /><br /><br /><br />
       </div>
-      {/* ===================================================================== */}
-      <div className="container py-5">
-      {/* Comments section */}
-      <h2 className="mb-4">Should you have any queries, don't hesitate to ask</h2>
-      <Form onSubmit={handleMainCommentSubmit}>
-        <Form.Group controlId="newComment">
-          <Form.Control
-            as="textarea"
-            value={newComment}
-            onChange={handleInputChange}
-            placeholder="Write your comment here..."
-            rows="4"
-          />
-        </Form.Group>
-        <br />
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-
-      <ListGroup className="mt-4">
-        {comments.length > 0 ? (
-          comments.map((comment, index) => (
-            <ListGroup.Item key={index} className="position-relative">
-              <div>{comment.text}</div>
-             
-              <Button variant="info" className="position-absolute top-0 start-100 translate-middle" onClick={() => handleReply(index)}>
-                Reply
-              </Button>
-              {replyTo === index && (
-                <Form onSubmit={handleReplySubmit} className="mt-2">
-                  <Form.Group controlId="replyText">
-                    <Form.Control
-                      as="textarea"
-                      value={replyText}
-                      onChange={handleReplyInputChange}
-                      placeholder="Write your reply here..."
-                      rows="2"
-                    />
-                  </Form.Group>
-                  <br />
-                  <Button variant="primary" type="submit"> 
-                    Reply
-                  </Button>
-                </Form>
-              )}
-              {comment.replies.length > 0 && (
-                <ListGroup className="mt-3">
-                  {comment.replies.map((reply, replyIndex) => (
-                    <ListGroup.Item key={replyIndex}>{reply.text}</ListGroup.Item>
-                  ))}
-                </ListGroup>
-              )}
-            </ListGroup.Item>
-          ))
-        ) : (
-          <p>No comments yet.</p>
-        )}
-      </ListGroup>
-    </div>
-
-
     </>
-  )
+  );
 }
 
-export default Help
+export default Help;

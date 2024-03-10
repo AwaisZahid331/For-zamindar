@@ -50,14 +50,14 @@ const Signup = ({ setPopup }) => {
               </div>
               <div className="row">
                 <div className="col-md-6">
-                  <div className="form-group">
+                  <div className="form-group"><br />
                     <input type="password" className="form-control form-control-sm" name="password" placeholder="Password" value={formData.password} onChange={handleChange} autoComplete='off' required/>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6"> <br />
                   <button type="submit" className="btn btn-primary btn-sm btn-block">Sign Up</button>
                 </div>
-              </div>
+              </div> <br />
                  <button className="btn btn-danger close-icon" onClick={handleClose}>Close</button>
             </form>
           </div>

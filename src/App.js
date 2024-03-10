@@ -10,7 +10,7 @@ import Footer from './MyComponents/Footer';
 // import Signup from './MyComponents/Signup';
 // import Login from './MyComponents/Login';
 
-
+import UploadForm from './MyComponents/UploadForm';
 
 
 
@@ -181,7 +181,6 @@ import Us7 from './Urdu_Semesters/Us7';
 import Us8 from './Urdu_Semesters/Us8';
 
 
-
 function App() {
   // const [showSignup, setShowSignup] = useState(false);
   // const [showLogin, setShowLogin] = useState(false);
@@ -199,7 +198,11 @@ function App() {
   return (
     <>
 
-     
+     <br /><br />
+          <UploadForm/>
+      
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
       <Router>
         <Navbar />
         <Routes>
@@ -209,7 +212,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
           {/* <Route path="/signup" element={<Signup />} /> */}
-
 
 
           <Route path="/ComSci" element={<ComSci />} />

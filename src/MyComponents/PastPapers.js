@@ -1,39 +1,42 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import './PastPapers.css'; // Import custom CSS for additional styling
+
+const DepartmentButton = ({ to, children }) => (
+    <NavLink to={to} className="btn btn-custom btn-block mb-3">
+        {children}
+    </NavLink>
+);
 
 const PastPapers = () => {
     return (
-        <>
-            <br /><br /><br />
-
-            <div className="container mt-4">
-                <h1 className='text-center heading'>Departments</h1> <hr /> <br />
-                <div className="row ">
-                    <div className="col-md-6">
-                        <NavLink to="/comsci" className="btn btn-success btn-block mb-2 p-3 bold-text">Computer Science Department </NavLink>
-                        <NavLink to="/maths" className="btn btn-success btn-block mb-2 p-3 bold-text">Mathematics Department</NavLink>
-                        <NavLink to="/eng" className="btn btn-success btn-block mb-2 p-3">English Department</NavLink>
-                        <NavLink to="/urdu" className="btn btn-success btn-block mb-2 p-3">Urdu Department</NavLink>
-                        <NavLink to="/bba" className="btn btn-success btn-block mb-2 p-3">Bachelor of Business Administration Department</NavLink>
-                        <NavLink to="/chemistry" className="btn btn-success btn-block mb-2 p-3">Chemistry Department</NavLink>
-                        {/* Add more NavLink buttons as needed */}
-                    </div>
-                    <div className="col-md-6">
-                        <NavLink to="/botnay" className="btn btn-success btn-block mb-2 p-3">Botany Department</NavLink>
-                        <NavLink to="/bio" className="btn btn-success btn-block mb-2 p-3">Biology Department</NavLink>
-                        <NavLink to="/psyc" className="btn btn-success btn-block mb-2 p-3">Psychology Department</NavLink>
-                        <NavLink to="/phy" className="btn btn-success btn-block mb-2 p-3">Physics Department</NavLink>
-                        <NavLink to="/ecnomics" className="btn btn-success btn-block mb-2 p-3">Economics Department</NavLink>
-                        <NavLink to="/islamic" className="btn btn-success btn-block mb-2 p-3">Islamic Department</NavLink>
-
-                        {/* Add more NavLink buttons as needed */}
+        <div className="container mt-5">  <br />
+            <h1 className="text-center heading">Departments</h1>
+            <hr className="divider" />
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="department-buttons">
+                        <DepartmentButton to="/comsci">Computer Science Department</DepartmentButton>
+                        <DepartmentButton to="/maths">Mathematics Department</DepartmentButton>
+                        <DepartmentButton to="/eng">English Department</DepartmentButton>
+                        <DepartmentButton to="/urdu">Urdu Department</DepartmentButton>
+                        <DepartmentButton to="/bba">Bachelor of Business Administration Department</DepartmentButton>
+                        <DepartmentButton to="/chemistry">Chemistry Department</DepartmentButton>
                     </div>
                 </div>
-
+                <div className="col-md-6">
+                    <div className="department-buttons">
+                        <DepartmentButton to="/botany">Botany Department</DepartmentButton>
+                        <DepartmentButton to="/bio">Biology Department</DepartmentButton>
+                        <DepartmentButton to="/psyc">Psychology Department</DepartmentButton>
+                        <DepartmentButton to="/phy">Physics Department</DepartmentButton>
+                        <DepartmentButton to="/economics">Economics Department</DepartmentButton>
+                        <DepartmentButton to="/islamic">Islamic Department</DepartmentButton>
+                    </div>
+                </div>
             </div>
-            <br /><br />
-        </>
+      <br />  </div>
     );
 }
 
